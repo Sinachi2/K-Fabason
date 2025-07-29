@@ -2,605 +2,876 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K-Fabason Digital Concept</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet" />
-  <link href="20250602_093357.png" rel="Icon" type="Image/png"/>
-  <style>
-    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-    :root {
-      --gold: #FFDF00;
-      --purple: #6D1799;
-      --blus: #040273;
-      --white: #ffffff;
-      --bgCol : #e0e9ff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Fabason Digital Concept</title>
+    <link href="20250602_093357.png" rel="Icon" type="Image/png" />
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-     font-family: 'Poppins', sans-serif; }
-    .filter-btns { margin-bottom: 20px; }
-    .filter-btns .btn { margin-right: 10px; }
-    .portfolio-modal .modal-content {
-      background-color: var(--bgCol);
-      padding: 20px;
-      border-radius: 15px;
-      animation:forwards 0.5s ease;
-    }
-    
-    .navbar{
-      background-color: var(--purple);
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .navbar a {
-      color: var(--white);
-      font-weight: 600;
-    }
-    .navbar a:hover {
-      color: var(--gold);
-    }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet" />
 
-    .hero {
-  height: 100vh;
-  background: url('Images/20250729_114614.jpg');
-  color: var(--white);
-  padding: 200px;
-  text-align: center;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  overflow: hidden;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
-    .services-icon {
-      font-size: 3rem;
-      color: var(--purple);
-    }
-    .card {
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-      transition: all 0.4s ease-in-out;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .btn-primary {
-      border-radius: 30px;
-      padding: 10px 30px;
-      background: var(--blus);
-      border: none;
-    }
-    .btn-primary:hover {
-      background: var(--purple);
-    }
-    .section-title {
-      color: var(--purple);
-    }
-    footer {
-      background-color: var(--purple);
-      color: var(--white);
-    }
-    footer a {
-      color: var(--gold);
-      transition: 0.3s;
-    }
-    footer a:hover {
-      color: var(--white);
-    }
-    .swiper {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 300px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-    .portfolio-label {
-      background-color: rgba(0,0,0,0.6);
-      color: var(--gold);
-      text-align: center;
-      padding: 10px;
-      font-weight: bold;
-    }
+    <style>
+        :root {
+            --gold: #FFDF00;
+            --purple: #6D1799;
+            --blus: #040273;
+            --white: #ffffff;
+            --bgCol: #e0e9ff;
+        }
 
-     .filter-btns {
-      margin-bottom: 20px;
-    }
-    .filter-btns .btn {
-      margin-right: 10px;
-    }
-    .portfolio-modal .modal-content {
-      background-color: #fff8db;
-      padding: 20px;
-      border-radius: 15px;
-    }
-    .portfolio-modal img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
+        /* General Body and Typography */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--purple);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar a {
+            color: var(--white);
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: var(--gold);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
 
 
-    @media (max-width: 778px) {
-      .hero {
-        padding: 100px 20px;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .services-icon {
-        font-size: 2rem;
-      }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('Images/20250729_114614.jpg') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            overflow: hidden;
+            padding: 100px 20px;
+        }
 
-    }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
 
-    @media (max-width: 575.98px) {
-  .hero {
-    padding: 60px 15px;
-    height: auto;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero .lead {
-    font-size: 1rem;
-  }
-  .services-icon {
-    font-size: 2rem;
-  }
-  .card {
-    padding: 20px;
-  }
-}
+        .hero .lead {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .hero {
-    padding: 80px 20px;
-    height: auto;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero .lead {
-    font-size: 1.2rem;
-  }
-}
+        /* Services Section */
+        .services-icon {
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 15px;
+        }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .hero {
-    padding: 120px 40px;
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .services-icon {
-    font-size: 2.5rem;
-  }
-}
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s ease-in-out;
+            background-color: var(--white);
+            height: 100%;
+        }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .hero {
-    padding: 160px 60px;
-  }
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-}
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
 
-/* Very large screens */
-@media (min-width: 1200px) {
-  .hero {
-    padding: 200px;
-  }
-}
+        /* Buttons */
+        .btn-primary {
+            border-radius: 30px;
+            padding: 12px 35px;
+            background: var(--blus);
+            border: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--purple);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-primary {
+            border-color: var(--blus);
+            color: var(--blus);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover,
+        .btn-outline-primary.active {
+            background-color: var(--blus);
+            color: var(--white);
+            border-color: var(--blus);
+        }
 
 
-    .portfolio-modal img { max-width: 100%; border-radius: 10px; }
-    @keyframes zoomIn { 
-      from { 
-        transform: scale(0.8); 
-        opacity: 0; 
-      } 
-      to { 
-        transform: scale(1); 
-        opacity: 1; 
-      }
-     }
-  </style>
+        /* Section Titles */
+        .section-title {
+            color: var(--purple);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Portfolio Section */
+        .filter-btns {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .portfolio-item {
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-image-wrapper { /* Renamed from .swiper-slide for clarity in portfolio */
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .portfolio-label {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--gold);
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-image-wrapper:hover .portfolio-label {
+            opacity: 1;
+        }
+
+        /* Portfolio Modals */
+        .portfolio-modal .modal-content {
+            background-color: var(--bgCol);
+            padding: 20px;
+            border-radius: 15px;
+            animation: zoomIn 0.4s ease-out forwards;
+        }
+
+        .portfolio-modal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* About Section */
+        #about img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #about .list-unstyled li {
+            margin-bottom: 10px;
+        }
+
+        #about .list-unstyled .fas {
+            margin-right: 8px;
+        }
+
+        /* Contact Section */
+        #contact .form-control {
+            border-radius: 10px;
+            padding: 10px 15px;
+        }
+
+        /* Testimonials Swiper */
+        .swiper-slide blockquote {
+            background-color: var(--bgCol);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 0;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .swiper-slide blockquote p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .swiper-slide blockquote footer {
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--purple);
+            font-size: 0.95rem;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--purple) !important;
+        }
+
+        /* Blog Section */
+        #blog .card {
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #blog .card-img-top {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #blog .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            padding: 15px 20px;
+            font-size: 24px;
+            background-color: #25D366;
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+            transform: translateY(-3px) scale(1.05);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--purple);
+            color: var(--white);
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            transition: color 0.3s ease;
+            font-size: 1.2rem;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .hero {
+                padding: 150px 40px;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .hero {
+                padding: 120px 30px;
+                height: auto;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero .lead {
+                font-size: 1.3rem;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+            .navbar-collapse {
+                text-align: center;
+                background-color: var(--purple);
+            }
+            .navbar-nav .nav-item {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero .lead {
+                font-size: 1.1rem;
+            }
+            .services-icon {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            #about img {
+                margin-bottom: 30px;
+            }
+            .filter-btns .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .whatsapp-btn {
+                padding: 12px 16px;
+                font-size: 20px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero {
+                padding: 60px 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .lead {
+                font-size: 1rem;
+            }
+            .services-icon {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .portfolio-image-wrapper { /* Ensure this is also responsive */
+                height: 250px;
+            }
+            footer a {
+                font-size: 1rem;
+                margin: 0 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <img width="200" src="Images/Logo.png" class="me-2" alt="Logo" style="animation: pulse 2s infinite;">
-      </a>
-      <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#services"><strong>Services</strong></a></li>
-          <li class="nav-item"><a class="nav-link" href="#about"><strong>About</strong></a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio"><strong>Portfolio</strong></a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img width="180" src="Images/Logo.png" class="me-2" alt="K-Fabason Digital Concept Logo"
+                    style="animation: pulse 2s infinite;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services"><strong>Services</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><strong>About</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"><strong>Portfolio</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" data-aos="fade-in">
-    <div class="container">
-      <h1 class="display-4">Creativity That Speaks</h1>
-      <p class="lead mb-4">We deliver modern, premium quality graphic design that sets you apart.</p>
-      <a href="#contact" class="btn btn-primary btn-lg">Place Your Order</a>
-    </div>
-  </section>
+    <section class="hero" data-aos="fade-in">
+        <div class="container">
+            <h1 class="display-4">Creativity That Speaks</h1>
+            <p class="lead mb-4">We deliver modern, premium quality graphic design that sets you apart.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Place Your Order</a>
+        </div>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold section-title" data-aos="zoom-in">Our Services</h2>
-        <p class="text-muted">Professional digital solutions designed with flair.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="card p-4 text-center">
-            <div class="services-icon mb-3"><i class="bi bi-bezier"></i></div>
-            <h5 class="fw-bold">Graphics Design</h5>
-            <p class=""> <b>Create captivating logos, flyers, brochures, branding tools and Many More</b> <br>
-               <i>When you think about amazing design work Think Of K-Fabason</i>
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="zoom-in">Our Services</h2>
+                <p class="text-muted">Professional digital solutions designed with flair.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card p-4 text-center">
+                        <div class="services-icon mb-3"><i class="bi bi-bezier"></i></div>
+                        <h5 class="fw-bold">Graphics Design</h5>
+                        <p class=""> <b>Create captivating logos, flyers, brochures, branding tools and Many More</b>
+                            <br>
+                            <i>When you think about amazing design work Think Of K-Fabason</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card p-4 text-center">
+                        <div class="services-icon mb-3"><i class="bi bi-vector-pen"></i></div>
+                        <h5 class="fw-bold">Logo Design</h5>
+                        <p>Craft a timeless and memorable identity for your brand. We design unique, versatile logos
+                            that capture your brand’s personality and leave a lasting impression on your audience.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card p-4 text-center">
+                        <div class="services-icon mb-3"><i class="bi bi-phone"></i></div>
+                        <h5 class="fw-bold">Branding</h5>
+                        <p>Build a strong brand identity that speaks your values. We craft cohesive visuals and
+                            messaging that leave a lasting impression.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card p-4 text-center">
+                        <div class="services-icon mb-3"><i class="bi bi-printer"></i></div>
+                        <h5 class="fw-bold">Printing Services</h5>
+                        <p>High-quality prints that bring your designs to life. From business cards to banners, we
+                            deliver sharp, vibrant, and professional results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="zoom-in">Our Portfolio</h2>
+                <p class="text-muted">Click to preview. Use the buttons to filter by category.</p>
+            </div>
+            <div class="text-center filter-btns">
+                <button class="btn btn-outline-primary active" onclick="filterSelection('all')">All</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('logo')">Logos</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('flyer')">Flyers</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('branding')">Branding</button>
+            </div>
+            <div class="row" id="portfolioGrid">
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item logo" data-aos="fade-up">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal1"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Logo+1');">
+                        <div class="portfolio-label">Logo Design - Project Alpha</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item flyer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal2"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Flyer+1');">
+                        <div class="portfolio-label">Event Flyer - Summer Fest</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item branding" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal3"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Branding+Mockup');">
+                        <div class="portfolio-label">Brand Identity - Eco Cafe</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item logo" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal4"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Logo+2');">
+                        <div class="portfolio-label">Logo Design - Tech Solutions</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item flyer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal5"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Flyer+2');">
+                        <div class="portfolio-label">Product Launch Flyer</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolio-item branding" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image-wrapper" data-bs-toggle="modal" data-bs-target="#modal6"
+                        style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Branding+Kit');">
+                        <div class="portfolio-label">Complete Branding Kit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade portfolio-modal" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Logo+Preview+1" alt="Logo Project Alpha Preview">
+                    <h5 class="mt-3 text-center" id="modal1Label">Logo Design - Project Alpha</h5>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade portfolio-modal" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Flyer+Preview+1" alt="Event Flyer Summer Fest Preview">
+                    <h5 class="mt-3 text-center" id="modal2Label">Event Flyer - Summer Fest</h5>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade portfolio-modal" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Branding+Preview+1" alt="Brand Identity Eco Cafe Preview">
+                    <h5 class="mt-3 text-center" id="modal3Label">Brand Identity - Eco Cafe</h5>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade portfolio-modal" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Logo+Preview+2" alt="Logo Tech Solutions Preview">
+                    <h5 class="mt-3 text-center" id="modal4Label">Logo Design - Tech Solutions</h5>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade portfolio-modal" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Flyer+Preview+2" alt="Product Launch Flyer Preview">
+                    <h5 class="mt-3 text-center" id="modal5Label">Product Launch Flyer</h5>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade portfolio-modal" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="https://via.placeholder.com/600x400?text=Branding+Preview+2" alt="Complete Branding Kit Preview">
+                    <h5 class="mt-3 text-center" id="modal6Label">Complete Branding Kit</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/500x400?text=About+K-Fabason" alt="About K-Fabason Digital Concept"
+                        class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2 class="fw-bold text-primary mb-3">About K-Fabason Digital Concept</h2>
+                    <p class="lead">K-Fabason is not just a creative brand it's an identity. We help individuals and
+                        businesses tell their stories through compelling visuals and powerful designs. Our philosophy
+                        blends aesthetics with strategy to ensure every design isn't just beautiful, but effective.</p>
+                    <p>With a proven track record in transforming brands across Nigeria, our services range from
+                        premium logo design to full-fledged digital branding and printing. Every pixel we place is
+                        purposeful, tailored to resonate with your audience and make your brand unforgettable.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Cutting-edge graphic design</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Social media & brand kits</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> High-quality print production</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold section-title" data-aos="fade-down">Let's Work Together</h2>
+                <p class="text-muted">Send us a message or reach out on social media.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-up-right">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up-left">
+                            <h5 class="fw-bold text-primary">Office</h5>
+                            <p>Uyo, Akwa Ibom State, Nigeria</p>
+                            <h5 class="fw-bold text-primary mt-4">Email</h5>
+                            <p>kfabasonconcept@gmail.com</p>
+                            <h5 class="fw-bold text-primary mt-4">Phone</h5>
+                            <p>+234 816 636 3949</p>
+                            <h5 class="fw-bold text-primary mt-4">Social Media</h5>
+                            <div class="d-flex social-icons">
+                                <a href="#" class="me-3 fs-4 text-dark"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="me-3 fs-4 text-dark"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="fs-4 text-dark"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary" data-aos="zoom-in">What Clients Say</h2>
+                <p class="text-muted">Hear directly from those who’ve worked with us.</p>
+            </div>
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">K-Fabason transformed my brand identity. The designs were crisp,
+                                professional, and delivered faster than expected!</p>
+                            <footer class="blockquote-footer">Jane Doe, Lagos</footer>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">Their attention to detail is unmatched. Every flyer and logo they made
+                                spoke volumes.</p>
+                            <footer class="blockquote-footer">Chinedu Ekene, Abuja</footer>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">Best digital brand in Uyo! I recommend K-Fabason to everyone serious about
+                                their brand image.</p>
+                            <footer class="blockquote-footer">Blessing Uche, Uyo</footer>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">Outstanding quality and fantastic customer service. K-Fabason is my go-to
+                                for all design needs.</p>
+                            <footer class="blockquote-footer">David Obi, Port Harcourt</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary" data-aos="zoom-in">Latest News</h2>
+                <p class="text-muted">Stay updated with our latest projects and design insights.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Blog+1" class="card-img-top"
+                            alt="Blog image about logo design">
+                        <div class="card-body">
+                            <h5 class="card-title">5 Tips for Choosing the Right Logo Design</h5>
+                            <p class="card-text">Your logo is your first impression. Discover key factors to keep in
+                                mind when creating one.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Blog+2" class="card-img-top"
+                            alt="Blog image about print design">
+                        <div class="card-body">
+                            <h5 class="card-title">Why Print Design Still Matters in 2025</h5>
+                            <p class="card-text">Print isn't dead—it's evolving. See how physical marketing
+                                complements your digital strategy.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Blog+3" class="card-img-top"
+                            alt="Blog image about startup branding">
+                        <div class="card-body">
+                            <h5 class="card-title">Case Study: Branding a Startup from Scratch</h5>
+                            <p class="card-text">Learn how we helped a new tech company launch with confidence and
+                                style.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/+2348166363949" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="text-center py-4">
+        <div class="container">
+            <p class="mb-2">&copy; <span id="currentYear"></span> K-Fabason Digital Concept. All Rights Reserved.</p>
+            <p class="mb-0">
+                <a href="#" class="text-gold me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gold me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gold"><i class="fab fa-behance"></i></a>
             </p>
-          </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card p-4 text-center">
-            <div class="services-icon mb-3"><i class="bi bi-vector-pen"></i></div>
-            <h5 class="fw-bold">Logo Design</h5>
-            <p>Craft a timeless and memorable identity for your brand. We design unique, versatile logos that capture your brand’s personality and leave a lasting impression on your audience.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card p-4 text-center">
-            <div class="services-icon mb-3"><i class="bi bi-phone"></i></div>
-            <h5 class="fw-bold">Branding</h5>
-            <p>Build a strong brand identity that speaks your values. We craft cohesive visuals and messaging that leave a lasting impression.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card p-4 text-center">
-            <div class="services-icon mb-3"><i class="bi bi-phone"></i></div>
-            <h5 class="fw-bold">Printing Services</h5>
-            <p>High-quality prints that bring your designs to life. From business cards to banners, we deliver sharp, vibrant, and professional results.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Portfolio Section -->
- <section id="portfolio" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold section-title" data-aos="zoom-in">Our Portfolio</h2>
-        <p class="text-muted">Click to preview. Use the buttons to filter by category.</p>
-      </div>
-      <div class="text-center filter-btns">
-        <button class="btn btn-outline-primary active" onclick="filterSelection('all')">All</button>
-        <button class="btn btn-outline-primary" onclick="filterSelection('logo')">Logos</button>
-        <button class="btn btn-outline-primary" onclick="filterSelection('flyer')">Flyers</button>
-        <button class="btn btn-outline-primary" onclick="filterSelection('web')">Branding</button>
-      </div>
-      <div class="row" id="portfolioGrid">
-        <div class="col-md-4 mb-4 portfolio-item logo" data-aos="fade-up">
-          <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal1" style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Logo+1'); height: 300px; background-size:cover; border-radius:20px;">
-            <div class="portfolio-label">Logo Design</div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 portfolio-item flyer" data-aos="fade-up">
-          <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal2" style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Flyer+1'); height: 300px; background-size:cover; border-radius:20px;">
-            <div class="portfolio-label">Flyer</div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 portfolio-item web" data-aos="fade-up">
-          <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal3" style="cursor:pointer;background-image:url('https://via.placeholder.com/300x300?text=Web+Design'); height: 300px; background-size:cover; border-radius:20px;">
-            <div class="portfolio-label">Web Design</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- Modals -->
-    <div class="modal fade portfolio-modal" id="modal1" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <img src="https://via.placeholder.com/600x400?text=Logo+Preview" alt="Logo Preview">
-        </div>
-      </div>
-    </div>
-    <div class="modal fade portfolio-modal" id="modal2" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <img src="https://via.placeholder.com/600x400?text=Flyer+Preview" alt="Flyer Preview">
-        </div>
-      </div>
-    </div>
-    <div class="modal fade portfolio-modal" id="modal3" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <img src="https://via.placeholder.com/600x400?text=Web+Preview" alt="Web Preview">
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: false,
+            });
 
-    <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="https://via.placeholder.com/500x400?text=About+Image" alt="About K-Fabason" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h2 class="fw-bold text-primary">About K-Fabason Digital Concept</h2>
-          <p class="lead">K-Fabason is not just a creative brand it's an identity. We help individuals and businesses tell their stories through compelling visuals and powerful designs. Our philosophy blends aesthetics with strategy to ensure every design isn't just beautiful, but effective.</p>
-          <p>With a proven track record in transforming brands across Nigeria, our services range from premium logo design to full-fledged digital branding and printing. Every pixel we place is purposeful, tailored to resonate with your audience and make your brand unforgettable.</p>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle text-success"></i> Cutting-edge graphic design</li>
-            <li><i class="fas fa-check-circle text-success"></i> Social media & brand kits</li>
-            <li><i class="fas fa-check-circle text-success"></i> High-quality print production</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+            // Portfolio Filtering
+            const filterSelection = (category) => {
+                const items = document.querySelectorAll('.portfolio-item');
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                document.querySelectorAll('.filter-btns .btn').forEach(btn => btn.classList.remove('active'));
+                // Find the clicked button and add 'active' class
+                const clickedBtn = event.target;
+                if (clickedBtn && clickedBtn.classList.contains('btn')) {
+                    clickedBtn.classList.add('active');
+                } else {
+                    // Fallback for initial load
+                    document.querySelector(`.filter-btns .btn[onclick="filterSelection('${category}')"]`).classList.add('active');
+                }
+            };
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold section-title" data-aos="fade-down">Let's Work Together</h2>
-        <p class="text-muted">Send us a message or reach out on social media.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-up-right">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
-        </div>
-        <div class="col-md-6" data-aos="fade-up-left">
-          <h5 class="fw-bold">Office</h5>
-          <p>Uyo, Akwa Ibom State, Nigeria</p>
-          <h5 class="fw-bold">Email</h5>
-          <p>kfabasonconcept@gmail.com</p>
-          <h5 class="fw-bold">Phone</h5>
-          <p>+234 0816 636 3949</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            // Initial filter on page load
+            filterSelection('all');
 
-  <!-- Testimonial Section -->
-<section id="testimonials" class="py-5 bg-white">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-primary" data-aos="zoom-in">What Clients Say</h2>
-      <p class="text-muted">Hear directly from those who’ve worked with us.</p>
-    </div>
-    <div class="swiper testimonialSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide text-center">
-          <blockquote class="blockquote">
-            <p class="mb-4">K-Fabason transformed my brand identity. The designs were crisp, professional, and delivered faster than expected!</p>
-            <footer class="blockquote-footer">Jane Doe, Lagos</footer>
-          </blockquote>
-        </div>
-        <div class="swiper-slide text-center">
-          <blockquote class="blockquote">
-            <p class="mb-4">Their attention to detail is unmatched. Every flyer and logo they made spoke volumes.</p>
-            <footer class="blockquote-footer">Chinedu Ekene, Abuja</footer>
-          </blockquote>
-        </div>
-        <div class="swiper-slide text-center">
-          <blockquote class="blockquote">
-            <p class="mb-4">Best digital brand in Uyo! I recommend K-Fabason to everyone serious about their brand image.</p>
-            <footer class="blockquote-footer">Blessing Uche, Uyo</footer>
-          </blockquote>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
-<!-- Blog/News Section -->
-<section id="blog" class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-primary" data-aos="zoom-in">Latest News</h2>
-      <p class="text-muted">Stay updated with our latest projects and design insights.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="card shadow-sm">
-          <img src="https://via.placeholder.com/400x250?text=Blog+1" class="card-img-top" alt="Blog 1">
-          <div class="card-body">
-            <h5 class="card-title">5 Tips for Choosing the Right Logo Design</h5>
-            <p class="card-text">Your logo is your first impression. Discover key factors to keep in mind when creating one.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card shadow-sm">
-          <img src="https://via.placeholder.com/400x250?text=Blog+2" class="card-img-top" alt="Blog 2">
-          <div class="card-body">
-            <h5 class="card-title">Why Print Design Still Matters in 2025</h5>
-            <p class="card-text">Print isn't dead—it's evolving. See how physical marketing complements your digital strategy.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card shadow-sm">
-          <img src="https://via.placeholder.com/400x250?text=Blog+3" class="card-img-top" alt="Blog 3">
-          <div class="card-body">
-            <h5 class="card-title">Case Study: Branding a Startup from Scratch</h5>
-            <p class="card-text">Learn how we helped a new tech company launch with confidence and style.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/+23408166363949" class="btn btn-success rounded-circle" target="_blank" style="position:fixed;bottom:20px;right:20px;z-index:9999;padding:15px 20px;font-size:20px;">
-  <i class="fab fa-whatsapp"></i>
-</a>
+            // Initialize Testimonial Swiper
+            new Swiper(".testimonialSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".testimonialSwiper .swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
 
-  <!-- Footer -->
-  <footer class="text-center py-4">
-    <div class="container">
-      <p class="mb-2">&copy; 2025 K-Fabason Digital Concept. All Rights Reserved.</p>
-      <p>
-        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-behance"></i></a>
-      </p>
-    </div>
-  </footer>
+            // Update current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-    window.addEventListener('load', () => {
-      filterSelection('all');
-    });
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-    function filterSelection(category) {
-      var items = document.querySelectorAll('.portfolio-item');
-      items.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-      document.querySelectorAll('.filter-btns .btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
 
-    AOS.init({ duration: 1000 });
-    new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: { delay: 3000 },
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }
-    });
-
-     // Portfolio filtering
-    function filterSelection(category) {
-      var items = document.querySelectorAll('.portfolio-item');
-      items.forEach(function(item) {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-      document.querySelectorAll('.filter-btns .btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
-    window.addEventListener('load', () => filterSelection('all'));
-
-    AOS.init({ duration: 1000 });
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        }
-      }
-    });
-
-      window.addEventListener('load', () => {
-    AOS.init({ duration: 500 });
-  });
-
-  new Swiper(".testimonialSwiper", {
-    loop: true,
-    autoplay: { delay: 5000 },
-    pagination: {
-      el: ".testimonialSwiper .swiper-pagination",
-      clickable: true,
-    },
-  });
-  </script>
+                    // Collapse navbar on link click for small screens
+                    if (window.innerWidth < 992) {
+                        const navbarToggler = document.querySelector('.navbar-toggler');
+                        const navbarCollapse = document.querySelector('#navbarNav');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarToggler.click();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
